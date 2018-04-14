@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ryoukai</groupId>
+        <artifactId>luke-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.ryoukai.kanrisya</groupId>
+    <artifactId>kanrisya</artifactId>
+    <packaging>pom</packaging>
+    <name>kanrisya</name>
+    <description>kanrisya</description>
+
+    <modules>
+        <module>kanrisya-api</module>
+        <module>kanrisya-service</module>
+        <module>kanrisya-dal</module>
+        <module>kanrisya-test</module>
+    </modules>
+
+    <properties>
+        <kanrisya.version>1.0.0-SNAPSHOT</kanrisya.version>
+    </properties>
+
+    <dependencyManagement>
+        <!--一方包-->
+        <dependencies>
+            <dependency>
+                <groupId>com.ryoukai.kanrisya</groupId>
+                <artifactId>kanrisya-service</artifactId>
+                <version>${kanrisya.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ryoukai.kanrisya</groupId>
+                <artifactId>kanrisya-api</artifactId>
+                <version>${kanrisya.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ryoukai.kanrisya</groupId>
+                <artifactId>kanrisya-dal</artifactId>
+                <version>${kanrisya.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ryoukai.kanrisya</groupId>
+                <artifactId>kanrisya-test</artifactId>
+                <version>${kanrisya.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
